@@ -23,7 +23,8 @@ class DemoView: UIView {
         self.backgroundColor = UIColor.darkGray
         
 //        simpleShapeLayer()
-        maskVSSublayer()
+//        maskVSSublayer()
+        twoShapes()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -126,6 +127,45 @@ class DemoView: UIView {
         
         self.backgroundColor = UIColor.green
         self.layer.mask = shapeLayer
+    }
+    
+    func twoShapes() {
+        let width: CGFloat = self.frame.size.width / 2
+        let height: CGFloat = self.frame.size.height / 2
+        
+        let path1 = UIBezierPath()
+        path1.move(to: CGPoint(x: width / 2, y: 0.0))
+        path1.addLine(to: CGPoint(x: 0.0, y: height))
+        path1.addLine(to: CGPoint(x: width, y: height))
+        path1.close()
+        
+        let path2 = UIBezierPath()
+        path2.move(to: CGPoint(x: width / 2, y: height))
+        path2.addLine(to: CGPoint(x: 0.0, y: 0.0))
+        path2.addLine(to: CGPoint(x: width, y: 0.0))
+        path2.close()
+        
+        let shapeLayer1 = CAShapeLayer()
+        shapeLayer1.path = path1.cgPath
+        shapeLayer1.fillColor = UIColor.yellow.cgColor
+        
+        let shapeLayer2 = CAShapeLayer()
+        shapeLayer2.path = path2.cgPath
+        shapeLayer2.fillColor = UIColor.green.cgColor
+        
+//        shapeLayer2.position = CGPoint(x: 0.0, y: height)
+        
+        shapeLayer2.position = CGPoint(x: width / 2, y: height)
+        shapeLayer1.position = CGPoint(x: width / 2, y: 0.0)
+        
+        shapeLayer1.bounds.origin = CGPoint(x: 0.0, y: 0.0)
+        shapeLayer1.bounds.size = CGSize(width: 200.0, height: 150.0)
+        shapeLayer1.backgroundColor = UIColor.magenta.cgColor
+        
+        shapeLayer1.bounds.origin = CGPoint(x: -20.0, y: -40.0)
+        
+        self.layer.addSublayer(shapeLayer1)
+        self.layer.addSublayer(shapeLayer2)
     }
     
 }

@@ -24,7 +24,8 @@ class DemoView: UIView {
         
 //        simpleShapeLayer()
 //        maskVSSublayer()
-        twoShapes()
+//        twoShapes()
+        complexShape()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -166,6 +167,31 @@ class DemoView: UIView {
         
         self.layer.addSublayer(shapeLayer1)
         self.layer.addSublayer(shapeLayer2)
+    }
+    
+    func complexShape() {
+        path = UIBezierPath()
+        path.move(to: CGPoint(x: 0.0, y: 0.0))
+        path.addLine(to: CGPoint(x: self.frame.size.width / 2 - 50.0, y: 0.0))
+        path.addArc(withCenter: CGPoint(x: self.frame.size.width / 2 - 25.0, y: 25.0),
+                    radius: 25.0,
+                    startAngle: CGFloat(180.0).toRadians(),
+                    endAngle: CGFloat(0.0).toRadians(),
+                    clockwise: false)
+        path.addLine(to: CGPoint(x: self.frame.size.width / 2, y: 0.0))
+        path.addLine(to: CGPoint(x: self.frame.size.width - 50.0, y: 0.0))
+        path.addCurve(to: CGPoint(x: self.frame.size.width, y: 50.0),
+                      controlPoint1: CGPoint(x: self.frame.size.width + 50.0, y: 25.0),
+                      controlPoint2: CGPoint(x: self.frame.size.width - 150.0, y: 50.0))
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
+        path.addLine(to: CGPoint(x: 0.0, y: self.frame.size.height))
+        path.close()
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        
+        self.backgroundColor = UIColor.orange
+        self.layer.mask = shapeLayer
     }
     
 }

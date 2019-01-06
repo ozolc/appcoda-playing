@@ -24,7 +24,16 @@ class DemoView: UIView {
     
     override func draw(_ rect: CGRect) {
         // self.createRectangle()
-        self.createTriangle()
+        // self.createTriangle()
+        
+        // Create an oval shape path
+        // self.path = UIBezierPath(ovalIn: self.bounds)
+        
+        // Create an circle shape path
+        self.path = UIBezierPath(ovalIn: CGRect(x: self.frame.size.width / 2 - self.frame.size.height / 2,
+                                                y: 0.0,
+                                                width: self.frame.size.height,
+                                                height: self.frame.size.height))
         
         // Specify the fill color and apply it to the path.
         UIColor.orange.setFill()

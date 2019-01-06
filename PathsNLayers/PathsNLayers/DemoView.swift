@@ -25,7 +25,8 @@ class DemoView: UIView {
 //        simpleShapeLayer()
 //        maskVSSublayer()
 //        twoShapes()
-        complexShape()
+//        complexShape()
+        createTextLayer()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -192,6 +193,22 @@ class DemoView: UIView {
         
         self.backgroundColor = UIColor.orange
         self.layer.mask = shapeLayer
+    }
+    
+    func createTextLayer() {
+        let textLayer = CATextLayer()
+        textLayer.string = "WOW!\nThis is text on a layer!"
+        textLayer.foregroundColor = UIColor.white.cgColor
+        textLayer.font = UIFont(name: "Avenir", size: 15.0)
+        textLayer.fontSize = 15.0
+        textLayer.alignmentMode = .center
+        textLayer.backgroundColor = UIColor.orange.cgColor
+        textLayer.frame = CGRect(x: 0.0,
+                                 y: self.frame.size.height / 2 - 20.0,
+                                 width: self.frame.size.width,
+                                 height: 40.0)
+        textLayer.contentsScale = UIScreen.main.scale
+        self.layer.addSublayer(textLayer)
     }
     
 }

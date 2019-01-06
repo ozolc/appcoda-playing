@@ -30,10 +30,18 @@ class DemoView: UIView {
         // self.path = UIBezierPath(ovalIn: self.bounds)
         
         // Create an circle shape path
-        self.path = UIBezierPath(ovalIn: CGRect(x: self.frame.size.width / 2 - self.frame.size.height / 2,
-                                                y: 0.0,
-                                                width: self.frame.size.height,
-                                                height: self.frame.size.height))
+//        self.path = UIBezierPath(ovalIn: CGRect(x: self.frame.size.width / 2 - self.frame.size.height / 2,
+//                                                y: 0.0,
+//                                                width: self.frame.size.height,
+//                                                height: self.frame.size.height))
+        
+        // Create a rounded rectangle
+        // self.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 15.0)
+        
+        // Create a rounded rectangle (only top-left and bottom-right corners)
+        self.path = UIBezierPath(roundedRect: self.bounds,
+                                 byRoundingCorners: [.topLeft, .bottomRight],
+                                 cornerRadii: CGSize(width: 15.0, height: 0.0))
         
         // Specify the fill color and apply it to the path.
         UIColor.orange.setFill()

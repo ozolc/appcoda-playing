@@ -8,18 +8,32 @@
 
 import UIKit
 
-@IBDesignable class DemoView: UIView {
+class DemoView: UIView {
 
     var path: UIBezierPath!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.darkGray
+        self.backgroundColor = UIColor.white
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(_ rect: CGRect) {
+        // self.createRectangle()
+        self.createTriangle()
+        
+        // Specify the fill color and apply it to the path.
+        UIColor.orange.setFill()
+        path.fill()
+        
+        path.lineWidth = 2.0
+        // Specify a border (stroke) color.
+        UIColor.purple.setStroke()
+        path.stroke()
     }
     
     func createRectangle() {
@@ -42,16 +56,13 @@ import UIKit
         path.close()
     }
     
-    override func draw(_ rect: CGRect) {
-        self.createRectangle()
-        
-        // Specify the fill color and apply it to the path.
-        UIColor.orange.setFill()
-        path.fill()
-        
-        path.lineWidth = 5.0
-        // Specify a border (stroke) color.
-        UIColor.purple.setStroke()
-        path.stroke()
+    func createTriangle() {
+        path = UIBezierPath()
+        path.move(to: CGPoint(x: self.frame.width / 2, y: 0.0))
+        path.addLine(to: CGPoint(x: 0.0, y: self.frame.size.height))
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
+        path.close()
     }
+    
+    
 }

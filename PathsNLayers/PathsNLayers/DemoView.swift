@@ -22,7 +22,8 @@ class DemoView: UIView {
         
         self.backgroundColor = UIColor.darkGray
         
-        simpleShapeLayer()
+//        simpleShapeLayer()
+        maskVSSublayer()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -114,7 +115,18 @@ class DemoView: UIView {
         self.layer.addSublayer(shapeLayer)
     }
     
-    
+    func maskVSSublayer() {
+        self.createTriangle()
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = UIColor.yellow.cgColor
+        
+//        self.layer.addSublayer(shapeLayer)
+        
+        self.backgroundColor = UIColor.green
+        self.layer.mask = shapeLayer
+    }
     
 }
 

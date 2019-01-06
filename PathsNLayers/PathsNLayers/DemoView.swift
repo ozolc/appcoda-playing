@@ -12,6 +12,11 @@ class DemoView: UIView {
 
     var path: UIBezierPath!
     
+    // Function for converting between the two is simple enough: multiply the number by Pi, then divide the result by 180.
+    func deg2rad(_ number: Double) -> Double {
+        return number * .pi / 180
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -39,9 +44,22 @@ class DemoView: UIView {
         // self.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 15.0)
         
         // Create a rounded rectangle (only top-left and bottom-right corners)
-        self.path = UIBezierPath(roundedRect: self.bounds,
-                                 byRoundingCorners: [.topLeft, .bottomRight],
-                                 cornerRadii: CGSize(width: 15.0, height: 0.0))
+//        self.path = UIBezierPath(roundedRect: self.bounds,
+//                                 byRoundingCorners: [.topLeft, .bottomRight],
+//                                 cornerRadii: CGSize(width: 15.0, height: 0.0))
+
+        // Create an arc
+//        self.path = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2),
+//                                 radius: self.frame.size.height / 2,
+//                                 startAngle: CGFloat(deg2rad(180.0)),
+//                                 endAngle: CGFloat(deg2rad(0.0)),
+//                                 clockwise: true)
+        
+        self.path = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2),
+                                 radius: self.frame.size.height / 2,
+                                 startAngle: CGFloat(270.0).toRadians(),
+                                 endAngle: CGFloat(90.0).toRadians(),
+                                 clockwise: false)
         
         // Specify the fill color and apply it to the path.
         UIColor.orange.setFill()
@@ -82,4 +100,11 @@ class DemoView: UIView {
     }
     
     
+}
+
+extension CGFloat {
+    // Convert from degrees to radians
+    func toRadians() -> CGFloat {
+        return self * CGFloat(Double.pi) / 180.0
+    }
 }

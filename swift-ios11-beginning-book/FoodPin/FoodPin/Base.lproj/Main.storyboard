@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="SMN-HB-6II">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="SMN-HB-6II" customClass="RestaurantTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SMN-HB-6II" id="ZHi-bx-Nxf">
@@ -68,6 +68,12 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="ogy-hk-sce" secondAttribute="bottom" constant="1.5" id="qoD-Wd-c9S"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="clY-vW-Evn" id="TEO-ob-C9d"/>
+                                    <outlet property="nameLabel" destination="Dmy-N3-Ckx" id="2fx-LP-33c"/>
+                                    <outlet property="thumbnailImageView" destination="B0q-6f-7bx" id="zk7-cI-MZm"/>
+                                    <outlet property="typeLabel" destination="DXM-lc-fyg" id="Qmf-J7-Y3U"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -43,7 +43,7 @@ class RestaurantTableViewController: UITableViewController {
 
 //         Configure the cell...
         cell.textLabel?.text = restaurantNames[indexPath.row]
-        cell.imageView?.image = UIImage(named: "restaurant")
+        cell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
 
         return cell
     }

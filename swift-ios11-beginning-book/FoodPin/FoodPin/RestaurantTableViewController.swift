@@ -22,6 +22,7 @@ class RestaurantTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.cellLayoutMarginsFollowReadableWidth = true
     }
 
     // MARK: - Table view data source
@@ -79,8 +80,33 @@ class RestaurantTableViewController: UITableViewController {
             cell?.accessoryType = .checkmark
             self.restaurantIsVisited[indexPath.row] = true
         })
-        optionMenu.addAction(checkInAction)
+//        optionMenu.addAction(checkInAction)
+        
+        let checkOutAction = UIAlertAction(title: "Check out", style: .default) {
+            (action: UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .none
+            self.restaurantIsVisited[indexPath.row] = false
+        }
+//        optionMenu.addAction(checkOutAction)
+        
+
+        if restaurantIsVisited[indexPath.row] {
+            optionMenu.addAction(checkOutAction)
+        } else {
+            optionMenu.addAction(checkInAction)
+        }
         
         tableView.deselectRow(at: indexPath, animated: false)
+        
+        if let popoverController = optionMenu.popoverPresentationController {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                popoverController.sourceView = cell
+                popoverController.sourceRect = cell.bounds
+            }
+        }
+        
     }
+    
+    
 }

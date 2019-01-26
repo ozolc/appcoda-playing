@@ -70,6 +70,8 @@ class RestaurantTableViewController: UITableViewController {
             restaurantIsVisited.remove(at: indexPath.row)
             restaurantImages.remove(at: indexPath.row)
         }
+        
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

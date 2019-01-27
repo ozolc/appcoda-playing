@@ -24,9 +24,9 @@
 		082FE11921F9F05E003CA347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		082FE11C21F9F05E003CA347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		082FE11E21F9F05E003CA347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewController.swift; path = Controller/RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		082FE12621F9FC5B003CA347 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
-		B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantDetailViewController.swift; path = Controller/RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		B06536B721FE1B8500F25675 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,17 +60,49 @@
 		082FE11121F9F05C003CA347 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
-				082FE11221F9F05C003CA347 /* AppDelegate.swift */,
-				082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */,
-				B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */,
-				082FE12621F9FC5B003CA347 /* RestaurantTableViewCell.swift */,
-				B06536B721FE1B8500F25675 /* Restaurant.swift */,
-				082FE11621F9F05C003CA347 /* Main.storyboard */,
+				B06536BD21FE223B00F25675 /* Storyboard */,
+				B06536B921FE210400F25675 /* Controller */,
+				B06536BC21FE220F00F25675 /* View */,
+				B06536BB21FE21B700F25675 /* Model */,
 				082FE11921F9F05E003CA347 /* Assets.xcassets */,
-				082FE11B21F9F05E003CA347 /* LaunchScreen.storyboard */,
 				082FE11E21F9F05E003CA347 /* Info.plist */,
+				082FE11221F9F05C003CA347 /* AppDelegate.swift */,
 			);
 			path = FoodPin;
+			sourceTree = "<group>";
+		};
+		B06536B921FE210400F25675 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */,
+				B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B06536BB21FE21B700F25675 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B06536B721FE1B8500F25675 /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B06536BC21FE220F00F25675 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				082FE12621F9FC5B003CA347 /* RestaurantTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B06536BD21FE223B00F25675 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				082FE11B21F9F05E003CA347 /* LaunchScreen.storyboard */,
+				082FE11621F9F05C003CA347 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

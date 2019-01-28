@@ -23,7 +23,7 @@ class RestaurantDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headerView.heartImageView.image = UIImage(named: restaurant.image)
+        headerView.headerImage.image = UIImage(named: restaurant.image)
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
 //        headerView.restaurantLocationLabel.text = restaurant.location

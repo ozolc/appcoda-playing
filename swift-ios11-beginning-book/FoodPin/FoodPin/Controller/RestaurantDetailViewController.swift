@@ -24,6 +24,7 @@ class RestaurantDetailViewController: UIViewController {
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
         
         navigationItem.largeTitleDisplayMode = .never
+        tableView.separatorStyle = .none
         
         tableView.delegate = self
         tableView.dataSource = self

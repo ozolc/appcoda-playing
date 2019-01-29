@@ -18,6 +18,12 @@ class RestaurantDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = .red
+        
+        tableView.contentInsetAdjustmentBehavior = .never
+        
         headerView.headerImage.image = UIImage(named: restaurant.image)
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
@@ -28,6 +34,15 @@ class RestaurantDetailViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        navigationController?.hidesBarsOnSwipe = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 }

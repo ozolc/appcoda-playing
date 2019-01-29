@@ -40,8 +40,32 @@ class RestaurantTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
+            navigationController?.navigationBar.largeTitleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60),
+                NSAttributedString.Key.font: customFont]
+        }
+        
+        navigationController?.hidesBarsOnSwipe = true
+        
+//        for family: String in UIFont.familyNames
+//        {
+//            print(family)
+//            for names: String in UIFont.fontNames(forFamilyName: family)
+//            {
+//                print("== \(names)")
+//            }
+//        }
         
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,10 +140,10 @@ class RestaurantTableViewController: UITableViewController {
             self.present(activityController, animated: true, completion: nil)
             completionHandler(true)
         }
-        deleteAction.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 231, green: 76, blue: 60)
         deleteAction.image = UIImage(named: "delete")
         
-        shareAction.backgroundColor = UIColor(red: 254.0/255.0, green: 149.0/255.0, blue: 38.0/255.0, alpha: 1.0)
+        shareAction.backgroundColor = UIColor(red: 254, green: 149, blue: 38)
         shareAction.image = UIImage(named: "share")
         
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
@@ -139,7 +163,7 @@ class RestaurantTableViewController: UITableViewController {
             completeHandler(true)
         }
 
-        tickAction.backgroundColor = UIColor(red: 30.0/255.0, green: 130.0/255.0, blue: 76.0/255.0, alpha: 1.0)
+        tickAction.backgroundColor = UIColor(red: 30, green: 130, blue: 76)
         tickAction.image = self.restaurants[indexPath.row].isVisited ? UIImage(named: "undo") : UIImage(named: "tick")
         
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [tickAction])

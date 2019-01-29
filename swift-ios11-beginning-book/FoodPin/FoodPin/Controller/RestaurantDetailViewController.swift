@@ -18,24 +18,28 @@ class RestaurantDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.tintColor = .red
-        
-        tableView.contentInsetAdjustmentBehavior = .never
-        
-        headerView.headerImage.image = UIImage(named: restaurant.image)
-        headerView.nameLabel.text = restaurant.name
-        headerView.typeLabel.text = restaurant.type
-        headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
-        
         navigationItem.largeTitleDisplayMode = .never
-        tableView.separatorStyle = .none
         
+        // Configure the table view
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.contentInsetAdjustmentBehavior = .never
         
-        navigationController?.hidesBarsOnSwipe = false
+        // Configure header view
+        headerView.nameLabel.text = restaurant.name
+        headerView.typeLabel.text = restaurant.type
+        headerView.headerImage.image = UIImage(named: restaurant.image)
+        headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+        
+        // Configure the navigation bar appearance
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = .clear
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.hidesBarsOnSwipe = false
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

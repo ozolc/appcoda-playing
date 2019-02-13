@@ -296,7 +296,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="mapView" destination="xbl-ZU-Bg2" id="37H-eg-jnf"/>
+                                            <outlet property="mapView" destination="xbl-ZU-Bg2" id="99F-MZ-lBE"/>
                                             <segue destination="EKq-1G-D24" kind="show" identifier="showMap" id="yIZ-jj-Sn9"/>
                                         </connections>
                                     </tableViewCell>

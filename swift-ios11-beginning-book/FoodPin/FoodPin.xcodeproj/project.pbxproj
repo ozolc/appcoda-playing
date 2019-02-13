@@ -13,6 +13,7 @@
 		082FE11D21F9F05E003CA347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082FE11B21F9F05E003CA347 /* LaunchScreen.storyboard */; };
 		082FE12521F9F111003CA347 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */; };
 		082FE12721F9FC5B003CA347 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FE12621F9FC5B003CA347 /* RestaurantTableViewCell.swift */; };
+		0893680D22146053005373F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0893680C22146053005373F9 /* MapViewController.swift */; };
 		08959E9121FF4E4F0043E3F0 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959E9021FF4E4F0043E3F0 /* RestaurantDetailHeaderView.swift */; };
 		08AEB57C21FF42B80017662F /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08AEB57121FF42B80017662F /* Rubik-Light.ttf */; };
 		08AEB57D21FF42B80017662F /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08AEB57221FF42B80017662F /* Rubik-Regular.ttf */; };
@@ -45,6 +46,7 @@
 		082FE11E21F9F05E003CA347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewController.swift; path = Controller/RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		082FE12621F9FC5B003CA347 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		0893680C22146053005373F9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		08959E9021FF4E4F0043E3F0 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		08AEB57121FF42B80017662F /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		08AEB57221FF42B80017662F /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */,
 				B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */,
+				0893680C22146053005373F9 /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				B055751621FF7A660000B83C /* RestaurantDetailTextCell.swift in Sources */,
 				082FE12521F9F111003CA347 /* RestaurantTableViewController.swift in Sources */,
 				082FE12721F9FC5B003CA347 /* RestaurantTableViewCell.swift in Sources */,
+				0893680D22146053005373F9 /* MapViewController.swift in Sources */,
 				B055751421FF78E40000B83C /* RestaurantDetailIconTextCell.swift in Sources */,
 				08F0E10B22009ED900501F39 /* UINavigationController+Ext.swift in Sources */,
 				08F0E10922009C5800501F39 /* UIColor+Ext.swift in Sources */,

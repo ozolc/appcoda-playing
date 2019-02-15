@@ -396,6 +396,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zo4-QW-fEk">
                                 <rect key="frame" x="319" y="48" width="33" height="32"/>
                                 <state key="normal" image="cross"/>
+                                <connections>
+                                    <segue destination="1FF-Fe-I1N" kind="unwind" unwindAction="closeWithSegue:" id="x3f-X8-gDW"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uYD-oZ-77e">
                                 <rect key="frame" x="74" y="93" width="227" height="481"/>
@@ -446,6 +449,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBn-Ca-3Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1FF-Fe-I1N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2326" y="594"/>
         </scene>

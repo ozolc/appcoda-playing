@@ -112,6 +112,10 @@ extension RestaurantDetailViewController: UITableViewDataSource {
         }
     }
     
+    @IBAction func close(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 

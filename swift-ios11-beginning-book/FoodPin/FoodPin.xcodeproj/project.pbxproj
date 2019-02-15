@@ -35,6 +35,7 @@
 		B055751621FF7A660000B83C /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055751521FF7A660000B83C /* RestaurantDetailTextCell.swift */; };
 		B05AB42E21FCBD5C00A79578 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */; };
 		B06536B821FE1B8500F25675 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06536B721FE1B8500F25675 /* Restaurant.swift */; };
+		B0B0A7172217110300895A07 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0A7162217110300895A07 /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		B055751521FF7A660000B83C /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantDetailViewController.swift; path = Controller/RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		B06536B721FE1B8500F25675 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		B0B0A7162217110300895A07 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */,
 				B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */,
 				0893680C22146053005373F9 /* MapViewController.swift */,
+				B0B0A7162217110300895A07 /* ReviewViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				08959E9121FF4E4F0043E3F0 /* RestaurantDetailHeaderView.swift in Sources */,
 				B06536B821FE1B8500F25675 /* Restaurant.swift in Sources */,
+				B0B0A7172217110300895A07 /* ReviewViewController.swift in Sources */,
 				08B07E012204667500A2915E /* RestaurantDetailMapCell.swift in Sources */,
 				B055751621FF7A660000B83C /* RestaurantDetailTextCell.swift in Sources */,
 				082FE12521F9F111003CA347 /* RestaurantTableViewController.swift in Sources */,

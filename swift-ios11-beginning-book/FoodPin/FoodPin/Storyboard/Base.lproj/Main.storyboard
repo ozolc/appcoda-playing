@@ -192,6 +192,9 @@
                                                     <integer key="value" value="25"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="2Ro-GF-O78" kind="presentation" identifier="showReview" modalTransitionStyle="crossDissolve" id="6xZ-W3-BY2"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

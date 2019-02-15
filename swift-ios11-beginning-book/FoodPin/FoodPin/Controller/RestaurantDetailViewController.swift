@@ -104,6 +104,11 @@ extension RestaurantDetailViewController: UITableViewDataSource {
         if segue.identifier == "showMap" {
             let destinationController = segue.destination as! MapViewController
             destinationController.restaurant = restaurant
+        } else {
+            if segue.identifier == "showReview" {
+                let destinationController = segue.destination as! ReviewViewController
+                destinationController.restaurant = restaurant
+            }
         }
     }
     

@@ -46,7 +46,7 @@ class ReviewViewController: UIViewController {
 //    }
     
     override func viewWillAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.4, delay: 0.1, options: [], animations: {
+        UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.3, options: [], animations: {
             self.rateButtons[0].alpha = 1.0
             self.rateButtons[0].transform = .identity
         }, completion: nil)

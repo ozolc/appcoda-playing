@@ -10,6 +10,8 @@ import UIKit
 
 class NewRestaurantController: UITableViewController {
     
+    @IBOutlet var photoImageView: UIImageView!
+    
     @IBOutlet var nameTextField: RoundedTextField! {
         didSet {
             nameTextField.tag = 1
@@ -71,6 +73,7 @@ class NewRestaurantController: UITableViewController {
             let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
                     imagePicker.allowsEditing = false
                     imagePicker.sourceType = .camera
                     
@@ -81,6 +84,7 @@ class NewRestaurantController: UITableViewController {
             let photoLibratyAction = UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
                     imagePicker.allowsEditing = false
                     imagePicker.sourceType = .photoLibrary
                     
@@ -104,5 +108,18 @@ extension NewRestaurantController: UITextFieldDelegate {
             newTextField.becomeFirstResponder()
         }
         return true
+    }
+}
+
+extension NewRestaurantController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = selectedImage
+            photoImageView.contentMode = .scaleAspectFill
+            photoImageView.clipsToBounds = true
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -402,7 +402,7 @@
         <!--New Restaurant-->
         <scene sceneID="xRK-wL-Nfz">
             <objects>
-                <tableViewController id="Ji9-v0-4Vo" sceneMemberID="viewController">
+                <tableViewController id="Ji9-v0-4Vo" customClass="NewRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KjA-YB-hsi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -618,6 +618,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="ag7-fQ-sup" id="1oz-xs-SL4"/>
+                        <outlet property="descriptonTextView" destination="GwP-By-axW" id="MQK-AV-pRN"/>
+                        <outlet property="nameTextField" destination="KH5-pN-S9T" id="y3a-hX-3qm"/>
+                        <outlet property="phoneTextField" destination="mMC-jF-pUt" id="FzZ-vi-2P2"/>
+                        <outlet property="typeTextField" destination="IpM-qS-gWo" id="SGh-9C-f88"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYl-0n-ER7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pnK-f8-bYU" userLabel="Exit" sceneMemberID="exit"/>

@@ -37,6 +37,7 @@
 		B06536B821FE1B8500F25675 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06536B721FE1B8500F25675 /* Restaurant.swift */; };
 		B0B0A7172217110300895A07 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0A7162217110300895A07 /* ReviewViewController.swift */; };
 		B0DBA4D0221851720076A1C3 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DBA4CF221851720076A1C3 /* RoundedTextField.swift */; };
+		B0DBA4D22218564C0076A1C3 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DBA4D12218564C0076A1C3 /* NewRestaurantController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		B06536B721FE1B8500F25675 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B0B0A7162217110300895A07 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		B0DBA4CF221851720076A1C3 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		B0DBA4D12218564C0076A1C3 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */,
 				0893680C22146053005373F9 /* MapViewController.swift */,
 				B0B0A7162217110300895A07 /* ReviewViewController.swift */,
+				B0DBA4D12218564C0076A1C3 /* NewRestaurantController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				08B07DFF2204659B00A2915E /* RestaurantDetailSeparatorCell.swift in Sources */,
 				B0DBA4D0221851720076A1C3 /* RoundedTextField.swift in Sources */,
 				082FE11321F9F05C003CA347 /* AppDelegate.swift in Sources */,
+				B0DBA4D22218564C0076A1C3 /* NewRestaurantController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

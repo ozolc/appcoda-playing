@@ -53,6 +53,9 @@ class NewRestaurantController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Remove UITableView separator line
+        tableView.separatorStyle = .none
+        
         // Configure navigation bar appearance
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.shadowImage = UIImage()

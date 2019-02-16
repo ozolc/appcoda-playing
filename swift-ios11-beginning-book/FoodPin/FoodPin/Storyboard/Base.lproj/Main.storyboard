@@ -471,6 +471,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="ib2-aG-BpO" id="FNV-5U-SV7"/>
+                        <outlet property="closeButton" destination="Zo4-QW-fEk" id="U1i-nK-tmn"/>
                         <outletCollection property="rateButtons" destination="4rw-Wt-tlV" collectionClass="NSMutableArray" id="g91-bi-K8Z"/>
                         <outletCollection property="rateButtons" destination="8UH-4V-K3v" collectionClass="NSMutableArray" id="aqq-Gn-mW8"/>
                         <outletCollection property="rateButtons" destination="tVd-Nz-aIr" collectionClass="NSMutableArray" id="BxD-O7-0JA"/>

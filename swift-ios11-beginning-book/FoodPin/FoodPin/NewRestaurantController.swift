@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController {
+    
+    var restaurant: RestaurantMO!
     
     @IBOutlet var photoImageView: UIImageView!
     
@@ -101,7 +104,26 @@ class NewRestaurantController: UITableViewController {
             present(photoSourceRequestController, animated: true, completion: nil)
         }
     }
-
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+            
+            restaurant.name = nameTextField.text
+            restaurant.type = typeTextField.text
+            restaurant.location = addressTextField.text
+            restaurant.phone = phoneTextField.text
+            restaurant.summary = descriptonTextView.text
+            restaurant.isVisited = false
+            
+            if let restaurantImage = photoImageView.image {
+                restaurant.image = restaurantImage.pngData()
+            }
+            
+            print("Saving data to context ...")
+            appDelegate.saveContext()
+        }
+    }
 }
 
 extension NewRestaurantController: UITextFieldDelegate {

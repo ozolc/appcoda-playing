@@ -35,6 +35,7 @@
 		B055751621FF7A660000B83C /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055751521FF7A660000B83C /* RestaurantDetailTextCell.swift */; };
 		B05AB42E21FCBD5C00A79578 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */; };
 		B06536B821FE1B8500F25675 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06536B721FE1B8500F25675 /* Restaurant.swift */; };
+		B0AD5D102219D2FD0078AFB9 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0AD5D0E2219D2FD0078AFB9 /* FoodPin.xcdatamodeld */; };
 		B0B0A7172217110300895A07 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0A7162217110300895A07 /* ReviewViewController.swift */; };
 		B0DBA4D0221851720076A1C3 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DBA4CF221851720076A1C3 /* RoundedTextField.swift */; };
 		B0DBA4D22218564C0076A1C3 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DBA4D12218564C0076A1C3 /* NewRestaurantController.swift */; };
@@ -71,6 +72,7 @@
 		B055751521FF7A660000B83C /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		B05AB42D21FCBD5C00A79578 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantDetailViewController.swift; path = Controller/RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		B06536B721FE1B8500F25675 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		B0AD5D0F2219D2FD0078AFB9 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		B0B0A7162217110300895A07 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		B0DBA4CF221851720076A1C3 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		B0DBA4D12218564C0076A1C3 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				082FE11921F9F05E003CA347 /* Assets.xcassets */,
 				082FE11E21F9F05E003CA347 /* Info.plist */,
 				082FE11221F9F05C003CA347 /* AppDelegate.swift */,
+				B0AD5D0E2219D2FD0078AFB9 /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				B055751621FF7A660000B83C /* RestaurantDetailTextCell.swift in Sources */,
 				082FE12521F9F111003CA347 /* RestaurantTableViewController.swift in Sources */,
 				082FE12721F9FC5B003CA347 /* RestaurantTableViewCell.swift in Sources */,
+				B0AD5D102219D2FD0078AFB9 /* FoodPin.xcdatamodeld in Sources */,
 				0893680D22146053005373F9 /* MapViewController.swift in Sources */,
 				B055751421FF78E40000B83C /* RestaurantDetailIconTextCell.swift in Sources */,
 				08F0E10B22009ED900501F39 /* UINavigationController+Ext.swift in Sources */,
@@ -509,6 +513,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0AD5D0E2219D2FD0078AFB9 /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0AD5D0F2219D2FD0078AFB9 /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = B0AD5D0F2219D2FD0078AFB9 /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 082FE10721F9F05C003CA347 /* Project object */;
 }

@@ -102,8 +102,30 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyRestaurantView" destination="ItH-Hd-EUD" id="HY8-D4-pU9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDP-dI-oIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="ItH-Hd-EUD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="iS3-tO-Y45">
+                            <rect key="frame" x="28" y="120" width="319" height="355"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="iS3-tO-Y45" secondAttribute="height" multiplier="80:89" id="ebu-6q-ydY"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="iS3-tO-Y45" firstAttribute="leading" secondItem="bwH-JW-c8X" secondAttribute="leading" constant="28" id="Uow-GW-ZHi"/>
+                        <constraint firstItem="iS3-tO-Y45" firstAttribute="top" secondItem="bwH-JW-c8X" secondAttribute="top" constant="100" id="ktl-Xp-HzT"/>
+                        <constraint firstAttribute="trailing" secondItem="iS3-tO-Y45" secondAttribute="trailing" constant="28" id="lP7-l3-Mtk"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="bwH-JW-c8X"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="785" y="36"/>
         </scene>
@@ -766,6 +788,7 @@
         <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
+        <image name="empty" width="310" height="372"/>
         <image name="happy" width="78" height="86"/>
         <image name="heart-tick" width="22" height="21"/>
         <image name="love" width="78" height="82"/>

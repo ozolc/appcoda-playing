@@ -66,6 +66,10 @@ class RestaurantTableViewController: UITableViewController {
         tableView.tableHeaderView = searchController?.searchBar
         searchController?.searchResultsUpdater = self
         searchController?.dimsBackgroundDuringPresentation = false
+        searchController?.searchBar.placeholder = "Search restaurants..."
+        searchController?.searchBar.barTintColor = .white
+        searchController?.searchBar.backgroundImage = UIImage()
+        searchController?.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
     }
     
     override func viewWillAppear(_ animated: Bool) {

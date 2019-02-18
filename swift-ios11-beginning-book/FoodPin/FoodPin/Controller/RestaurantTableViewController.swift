@@ -15,6 +15,7 @@ class RestaurantTableViewController: UITableViewController {
     
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
     var searchController: UISearchController?
+    var searchResults: [RestaurantMO] = []
     
     @IBOutlet var emptyRestaurantView: UIView!
     
@@ -64,6 +65,12 @@ class RestaurantTableViewController: UITableViewController {
         self.navigationItem.searchController = searchController
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+    }
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
@@ -96,15 +103,15 @@ class RestaurantTableViewController: UITableViewController {
         tableView.endUpdates()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.hidesBarsOnSwipe = true
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func filterContent(for searchText: String) {
+        searchResults = restaurants.filter({ (restaurant) -> Bool in
+            if let name = restaurant.name {
+                let isMatch = name.localizedCaseInsensitiveContains(searchText)
+                return isMatch
+            }
+            
+            return false
+        })
     }
     
     // MARK: - UITableViewDataSource Protocol

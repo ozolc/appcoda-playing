@@ -34,6 +34,10 @@ class RestaurantDetailViewController: UIViewController {
         }
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
         
+        if let rating = restaurant.rating {
+            headerView.ratingImageView.image = UIImage(named: rating)
+        }
+        
         // Configure the navigation bar appearance
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -125,6 +129,10 @@ extension RestaurantDetailViewController: UITableViewDataSource {
             if let rating = segue.identifier {
                 self.restaurant.rating = rating
                 self.headerView.ratingImageView.image = UIImage(named: rating)
+                
+                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                    appDelegate.saveContext()
+                }
                 
                 let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
                 self.headerView.ratingImageView.transform = scaleTransform

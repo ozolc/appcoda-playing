@@ -44,11 +44,11 @@ class NewRestaurantController: UITableViewController {
         }
     }
     
-    @IBOutlet var descriptonTextView: UITextView! {
+    @IBOutlet var descriptionTextView: UITextView! {
         didSet {
-            descriptonTextView.tag = 5
-            descriptonTextView.layer.cornerRadius = 5.0
-            descriptonTextView.layer.masksToBounds = true
+            descriptionTextView.tag = 5
+            descriptionTextView.layer.cornerRadius = 5.0
+            descriptionTextView.layer.masksToBounds = true
         }
     }
     
@@ -106,6 +106,21 @@ class NewRestaurantController: UITableViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        if nameTextField.text == "" || typeTextField.text == "" || addressTextField.text == "" || phoneTextField.text == "" || descriptionTextView.text == "" {
+            let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        print("Name: \(nameTextField.text ?? "")")
+        print("Type: \(typeTextField.text ?? "")")
+        print("Location: \(addressTextField.text ?? "")")
+        print("Phone: \(phoneTextField.text ?? "")")
+        print("Description: \(descriptionTextView.text ?? "")")
+        
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
             restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
             
@@ -113,7 +128,7 @@ class NewRestaurantController: UITableViewController {
             restaurant.type = typeTextField.text
             restaurant.location = addressTextField.text
             restaurant.phone = phoneTextField.text
-            restaurant.summary = descriptonTextView.text
+            restaurant.summary = descriptionTextView.text
             restaurant.isVisited = false
             
             if let restaurantImage = photoImageView.image {
@@ -123,6 +138,8 @@ class NewRestaurantController: UITableViewController {
             print("Saving data to context ...")
             appDelegate.saveContext()
         }
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 

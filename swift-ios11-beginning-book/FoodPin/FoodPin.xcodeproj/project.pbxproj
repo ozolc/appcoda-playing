@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		082E05A8221BFA5E00AA47C4 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082E05A7221BFA5E00AA47C4 /* Onboarding.storyboard */; };
 		082E05AA221C1BD600AA47C4 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E05A9221C1BD600AA47C4 /* WalkthroughContentViewController.swift */; };
 		082E05AC221C1E4F00AA47C4 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082E05AB221C1E4F00AA47C4 /* WalkthroughPageViewController.swift */; };
 		082FE11321F9F05C003CA347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FE11221F9F05C003CA347 /* AppDelegate.swift */; };
@@ -16,6 +15,8 @@
 		082FE11D21F9F05E003CA347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082FE11B21F9F05E003CA347 /* LaunchScreen.storyboard */; };
 		082FE12521F9F111003CA347 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */; };
 		082FE12721F9FC5B003CA347 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FE12621F9FC5B003CA347 /* RestaurantTableViewCell.swift */; };
+		088F7FC2221D812600AFC925 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088F7FC1221D812600AFC925 /* WalkthroughViewController.swift */; };
+		088F7FC4221D831B00AFC925 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088F7FC3221D831B00AFC925 /* Onboarding.storyboard */; };
 		0893680D22146053005373F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0893680C22146053005373F9 /* MapViewController.swift */; };
 		08959E9121FF4E4F0043E3F0 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959E9021FF4E4F0043E3F0 /* RestaurantDetailHeaderView.swift */; };
 		08AEB57C21FF42B80017662F /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08AEB57121FF42B80017662F /* Rubik-Light.ttf */; };
@@ -45,7 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		082E05A7221BFA5E00AA47C4 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		082E05A9221C1BD600AA47C4 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		082E05AB221C1E4F00AA47C4 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		082FE10F21F9F05C003CA347 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +56,8 @@
 		082FE11E21F9F05E003CA347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		082FE12421F9F111003CA347 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewController.swift; path = Controller/RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		082FE12621F9FC5B003CA347 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		088F7FC1221D812600AFC925 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		088F7FC3221D831B00AFC925 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		0893680C22146053005373F9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		08959E9021FF4E4F0043E3F0 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		08AEB57121FF42B80017662F /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				B0DBA4D12218564C0076A1C3 /* NewRestaurantController.swift */,
 				082E05A9221C1BD600AA47C4 /* WalkthroughContentViewController.swift */,
 				082E05AB221C1E4F00AA47C4 /* WalkthroughPageViewController.swift */,
+				088F7FC1221D812600AFC925 /* WalkthroughViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -214,7 +217,7 @@
 			children = (
 				082FE11B21F9F05E003CA347 /* LaunchScreen.storyboard */,
 				082FE11621F9F05C003CA347 /* Main.storyboard */,
-				082E05A7221BFA5E00AA47C4 /* Onboarding.storyboard */,
+				088F7FC3221D831B00AFC925 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -288,7 +291,6 @@
 				08AEB57E21FF42B80017662F /* Rubik-Black.ttf in Resources */,
 				08AEB58321FF42B80017662F /* Rubik-LightItalic.ttf in Resources */,
 				082FE11D21F9F05E003CA347 /* LaunchScreen.storyboard in Resources */,
-				082E05A8221BFA5E00AA47C4 /* Onboarding.storyboard in Resources */,
 				08AEB57C21FF42B80017662F /* Rubik-Light.ttf in Resources */,
 				082FE11A21F9F05E003CA347 /* Assets.xcassets in Resources */,
 				08AEB58221FF42B80017662F /* Rubik-Italic.ttf in Resources */,
@@ -297,6 +299,7 @@
 				08AEB57D21FF42B80017662F /* Rubik-Regular.ttf in Resources */,
 				082FE11821F9F05C003CA347 /* Main.storyboard in Resources */,
 				08AEB58621FF42B80017662F /* Rubik-Medium.ttf in Resources */,
+				088F7FC4221D831B00AFC925 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +319,7 @@
 				082FE12721F9FC5B003CA347 /* RestaurantTableViewCell.swift in Sources */,
 				B0AD5D102219D2FD0078AFB9 /* FoodPin.xcdatamodeld in Sources */,
 				0893680D22146053005373F9 /* MapViewController.swift in Sources */,
+				088F7FC2221D812600AFC925 /* WalkthroughViewController.swift in Sources */,
 				B055751421FF78E40000B83C /* RestaurantDetailIconTextCell.swift in Sources */,
 				08F0E10B22009ED900501F39 /* UINavigationController+Ext.swift in Sources */,
 				08F0E10922009C5800501F39 /* UIColor+Ext.swift in Sources */,

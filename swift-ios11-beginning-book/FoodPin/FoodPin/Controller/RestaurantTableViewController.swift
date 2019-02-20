@@ -72,6 +72,13 @@ class RestaurantTableViewController: UITableViewController {
         searchController?.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

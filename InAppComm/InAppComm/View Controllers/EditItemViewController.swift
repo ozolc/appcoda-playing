@@ -8,6 +8,7 @@
 
 protocol EditItemViewControllerDelegate {
     func shouldAdd(item: String)
+    func isItemPresent(item: String) -> Bool
 }
 
 import UIKit
@@ -16,7 +17,7 @@ import UIKit
 class EditItemViewController: UIViewController {
     
     var delegate: EditItemViewControllerDelegate!
-
+    
     // MARK: - IBOutlet Properties
     
     @IBOutlet weak var textField: UITextField!
@@ -35,11 +36,11 @@ class EditItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -53,15 +54,15 @@ class EditItemViewController: UIViewController {
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     
     // MARK: - Custom Methods
     
@@ -84,29 +85,39 @@ class EditItemViewController: UIViewController {
         
         if text != "" {
             if let delegate = delegate {
-                delegate.shouldAdd(item: text)
+                if !delegate.isItemPresent(item: text) {
+                    // Item doesn't exist in the ittems collection,
+                    // so let's add it now.
+                    delegate.shouldAdd(item: text)
+                    navigationController?.popViewController(animated: true)
+                
+                } else {
+                    // Item exists already in the items collection.
+                    // Show an alert to indicate that.
+                    let alert = UIAlertController(title: "Item exists", message: "\(text) already exists in your shopping list.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    present(alert, animated: true, completion: nil)
+                }
             }
             
-            navigationController?.popViewController(animated: true)
         }
     }
-    
-    
-    @IBAction func deleteItem(_ sender: Any) {
+            
+            @IBAction func deleteItem(_ sender: Any) {
+                
+            }
+            
+        }
         
-    }
-    
-}
-
-
-
-
-// MARK: - UITextFieldDelegate
-extension EditItemViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        saveItem(self)
-        return true
-    }
+        
+        
+        
+        // MARK: - UITextFieldDelegate
+        extension EditItemViewController: UITextFieldDelegate {
+            func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+                saveItem(self)
+                return true
+            }
 }
 
 

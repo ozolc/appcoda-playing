@@ -153,4 +153,12 @@ extension ShoppingListViewController: EditItemViewControllerDelegate {
         shoppingList.items.append(item)
         tableView.reloadData()
     }
+    
+    func isItemPresent(item: String) -> Bool {
+        if let _ = shoppingList.items.firstIndex(of: item) {
+            return true
+        } else {
+            return false
+        }
+    }
 }
